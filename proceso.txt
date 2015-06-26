@@ -1,0 +1,84 @@
+bootstrap-parrilla-demo
+-- Nuevo proyecto
+01. Descomprimir plantilla > carpeta "bootstrap-parrilla-demo".
+02. Crear nuevo proyecto GitHub "bootstrap-parrilla-demo".
+--- Contenido base
+03. Crear 4 bloques "div":
+	- Encabezado "h4" + Número encabezado.
+	- Párrafo "lorem ipsum".
+	> div*4>h4{Columna $}+p>lorem.
+04. Mostrar el aspecto redimensionando el navegador.
+--- Clase "container" / "container-fluid"
+05. Envolver todo en contenedor ".container".
+	> SELECCION - Ctrl + Mays + A - .container
+06. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> 4 patrones de anchura (3 fijos + adaptable).
+	> Márgenes.
+--- Clase "row"
+07. Envolver todos los 4 bloques internos en un contenedor ".row".
+	> SELECCION - Ctrl + Mays + A - .row
+08. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> No pasa nada!!!
+--- Cuatro columnas "md" x 3 celdas
+09. Aplicar a cada bloque interno la clase:
+    > ".col-md-3", 
+	quedando:
+    <div class="col-md-3">
+10. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> Aparición de 4 columnas en los tamaños: "md" y "lg".
+	> El aspecto no varia en los tamaños: "xs" y "sm".
+--- Tamaños "xs" y "sm"
+11. Aplicar a cada bloque interno las clases:
+    > ".col-xs-12"
+	> ".col-sm-6",
+	quedando:
+    <div class="col-xs-12 col-sm-6 col-md-3">
+12. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> Aparición de 1 columna en el tamaño: "xs".
+	> Aparición de 2 columnas en el tamaño: "sm".
+--- Reiniciar fluidez parrilla
+13. Triplicar el párrafo de los bloques internos primero y tercero.	
+14. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> Efecto no deseado del bloque interno 3 en el tamaño: "sm".
+15. Insertar el siguiente bloque:
+	<div class="clearfix visible-sm-block"></div>
+	inmediatamente antes del bloque 3.
+16. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> La clase ".clearfix" reinicializa la adaptación de columnas 
+	  colocando el bloque interno 3 en una nueva fila.
+	> La clase ".visible-sm-block" hace que el bloque ".clearfix"
+	  sólo aparezca en el tamaño "sm" y por tanto su efecto de 
+	  "reset" sólo se aplique en este tamaño.
+--- Elementos visibles/invisibles dependiendo del perfil de tamaño
+17. Ocultar el bloque interno primero para el perfil de tamaño "xs".
+	div class="col-xs-12 col-sm-6 col-md-3 color1 hidden-xs">
+	Ocultar el bloque interno segundo para el perfil de tamaño "sm".
+	<div class="col-xs-12 col-sm-6 col-md-3 hidden-sm">
+	Ocultar el bloque interno cuarto para el perfil de tamaño "md".
+	<div class="col-xs-12 col-sm-6 col-md-3 hidden-md">
+18. Mostrar el aspecto de la página redimensionando el navegador.
+    Observar:
+	> El bloque interno primero no aparece para el perfil de tamaño "xs".
+	> El bloque interno segundo no aparece para el perfil de tamaño "sm".
+	> El bloque interno cuarto no aparece para el perfil de tamaño "md".
+	> El bloque tercero se ve en todos los perfiles de tamaño.
+--- Desplazamiento de la posición asignada
+19. Desplazar 3 columnas el bloque interno tercero para el perfil de
+    tamaño "md":
+	<div class="col-xs-12 col-sm-6 col-md-3 color1 col-md-offset-3">
+20. Observar el aspecto de la página den el perfil de tamaño "md" en
+    donde el bloque interno tercero se ha desplazado a la derecha,
+	ocupando la posición del bloque interno cuarto, que en esta perfil
+	de tamaño está oculto.
+21. Observar que en el perfil de tamaño "lg" se sigue manteniendo el 
+	desplazamiento, dando lugar a un efecto no deseable.
+22. Cancelar el desplazamiento del bloque interno tercero para el perfil 
+	de tamaño "lg":
+	<div class="col-xs-12 col-sm-6 col-md-3 color1 col-md-offset-3 col-lg-offset-0">
+---
